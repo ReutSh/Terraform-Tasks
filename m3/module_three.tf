@@ -6,7 +6,7 @@ variable "profile" {}
 variable "key_name" {}
 variable "private_key_path" {}
 variable "region" {
-  default = "us-east-2"
+  default = "us-east-1"
 }
 
 ##################################################################################
@@ -49,7 +49,7 @@ data "aws_ami" "aws-linux" {
 ##################################################################################
 
 #This uses the default VPC.  It WILL NOT delete it on destroy.
-resource "aws_default_vpc" "RFV" {
+resource "aws_default_vpc" "default" {
 
 }
 
